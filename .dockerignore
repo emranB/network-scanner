@@ -1,0 +1,5 @@
+/test
+/tests
+poetry.lock
+scan_results.txt
+scanner.log

@@ -1,0 +1,17 @@
+{
+    "logger": {
+        "log_to_screen": false,
+        "log_to_file": true,
+        "log_file": "scanner.log",
+        "debug": true
+    },
+
+    "netscanner": {
+        "mode": "icmp",
+        "ip_range": "127.0.0.1-127.0.0.5",
+        "port_range": "139-140",
+        "output_file": "scan_results.txt",
+        "print_to_screen": true,
+        "write_to_file": true
+    }
+}
