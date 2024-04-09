@@ -93,4 +93,7 @@ Sample config:
         "write_to_file": true
     }
 }
+---
+
+Note: netscanner/mode: Supported modes: `["tcp" | "icmp"]`
 ```
