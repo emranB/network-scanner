@@ -35,7 +35,7 @@ Result: 127.0.0.2
 Result: 127.0.0.3
 Result: 127.0.0.4
 Result: 127.0.0.5
-Scan completed. Results saved to C:/Users/omega/Desktop/Code/Cybersecurity - Skills For Hire - 2024/Assignment 2/NetworkScanner\scan_results.txt
+Scan completed. Results saved to <output_file_path>
 ----------------------------------------------------
 Alive hosts:  ['127.0.0.1', '127.0.0.2', '127.0.0.3', '127.0.0.4', '127.0.0.5']
 ----------------------------------------------------
