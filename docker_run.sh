@@ -1,1 +1,1 @@
-docker run --privileged --network=host network-scanner
+docker run --privileged --network=host --name network-scanner
