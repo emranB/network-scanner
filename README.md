@@ -113,4 +113,5 @@ The use of Internet Control Message Protocol (ICMP) and Transmission Control Pro
 ## TCP (Transmission Control Protocol)
 - `Three-way Handshake`: Leverages the SYN, SYN-ACK, ACK handshake for connection establishment, allowing for the detection of open ports without completing a connection. This method, known as SYN scanning, is stealthy and often evades certain firewall protections.
 - `Port Scanning Capabilities`: Essential for determining the open ports on a host, as it directly tries to establish connections, providing clear insights into the services running on a host.
+
 Both protocols are chosen for their specific roles in network management and communication, with ICMP being optimal for quick, broad checks of host availability, and TCP providing detailed insights into available services and port statuses. Their combined use in scanning operations ensures a comprehensive view of network host activity and service availability.
