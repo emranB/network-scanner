@@ -1,5 +1,5 @@
 from ..NetScanner import NetScanner
-import subprocess
+import sys, subprocess
 
 
 class IcmpScanner(NetScanner):
@@ -33,8 +33,15 @@ class IcmpScanner(NetScanner):
 
     def _send_ping_request(self, ip):
         try: # Run the ping command with -c 1 option to ping only once
-            result = subprocess.check_output(["ping", ip]).decode()
-            is_alive = "TTL" in result or "ttl" in result
+            result = None
+            if 'linux' in sys.platform:
+                result = subprocess.Popen(['ping', '-c', '2', ip], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            elif 'win' in sys.platform:
+                result = subprocess.Popen(['ping', '-n', '2', ip], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+            else:
+                raise OSError("Unsupported platform")
+            stdout, stderr = result.communicate()
+            is_alive = "TTL" in stdout.decode('utf-8') or "ttl" in stdout.decode('utf-8')
             if is_alive:
                 self.logger.info(f"Host {ip} is alive")
                 self.alive_hosts.append(ip)

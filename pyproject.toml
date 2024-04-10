@@ -2,7 +2,7 @@
 name = "networkscanner"
 version = "0.1.0"
 description = ""
-authors = ["Emran Billah <emran@drinkable.tech>"]
+authors = ["Emran Billah <emran.billah@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -10,8 +10,6 @@ python = "^3.11"
 argparse = "^1.4.0"
 ipaddress = "^1.0.23"
 logging = "^0.4.9.6"
-scapy = "^2.5.0"
-
 
 [build-system]
 requires = ["poetry-core"]

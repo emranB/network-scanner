@@ -1,6 +1,6 @@
 {
     "logger": {
-        "log_to_screen": false,
+        "log_to_screen": true,
         "log_to_file": true,
         "log_file": "scanner.log",
         "debug": true

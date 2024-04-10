@@ -2,7 +2,7 @@ name: Build docker container for network-scanner
 run-name: ${{ github.actor }} building actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build-Network-Scanner:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -17,4 +17,4 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Run build script
-        run: sh build.sh
+        run: sh docker_build.sh
