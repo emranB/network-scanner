@@ -100,20 +100,15 @@ Note: netscanner/mode: Supported modes: `["tcp" | "icmp"]`
 ---
 
 # Philosophy
----
-### The use of Internet Control Message Protocol (ICMP) and Transmission Control Protocol (TCP) for scanning to identify active hosts is based on their inherent functionalities within the network protocol stack, each offering unique advantages for this purpose:
+The use of Internet Control Message Protocol (ICMP) and Transmission Control Protocol (TCP) for scanning to identify active hosts is based on their inherent functionalities within the network protocol stack, each offering unique advantages for this purpose:
 
 ## ICMP (Internet Control Message Protocol)
-<pre>
 - `Diagnostic and Control Messaging`: Tailored for sending network diagnostic or control messages, facilitating error reporting and status inquiries.
 - `Echo Request/Reply`: Utilizes simple echo mechanisms (ping) for host reachability checks, making it straightforward to ascertain if a host is active.
 - `Efficiency`: Offers minimal overhead with its lightweight messages, ideal for broad scanning operations.
-</pre>
 
 ## TCP (Transmission Control Protocol)
-<pre>
 - `Three-way Handshake`: Leverages the SYN, SYN-ACK, ACK handshake for connection establishment, allowing for the detection of open ports without completing a connection. This method, known as SYN scanning, is stealthy and often evades certain firewall protections.
 - `Port Scanning Capabilities`: Essential for determining the open ports on a host, as it directly tries to establish connections, providing clear insights into the services running on a host.
-</pre>
-
+<br/>
 Both protocols are chosen for their specific roles in network management and communication, with ICMP being optimal for quick, broad checks of host availability, and TCP providing detailed insights into available services and port statuses. Their combined use in scanning operations ensures a comprehensive view of network host activity and service availability.
